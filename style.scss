@@ -32,6 +32,7 @@ div.shopping-container {
   }
 }
 
-.line-throught {
-  text-decoration: line-through;
+.line-through {
+  -webkit-text-decoration-line: line-through; /* Safari */
+  text-decoration-line: line-through;
 }

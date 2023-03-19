@@ -24,3 +24,13 @@ function createProduct(e) {
 }
 
 userInputTag.addEventListener("change", createProduct);
+
+orderListsTag.addEventListener("click", function (e) {
+  if (e.target && e.target.nodeName == "LI") {
+    if (e.target.classList.contains("line-through")) {
+      e.target.classList.remove("line-through");
+    } else {
+      e.target.classList.add("line-through");
+    }
+  }
+});
