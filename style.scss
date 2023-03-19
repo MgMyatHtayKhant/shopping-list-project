@@ -1,0 +1,37 @@
+body {
+  background-color: #343a4a;
+  display: flex;
+  justify-content: center;
+}
+
+div.shopping-container {
+  flex: 0 1 500px;
+  margin-top: 50px;
+  border: 3px solid red;
+  background-color: wheat;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  input {
+    padding: 5px 0px 5px 15px;
+  }
+
+  div.products-list {
+    display: flex;
+    justify-content: center;
+    ol.list-group {
+      gap: 0.5rem;
+      li {
+        width: max-content;
+        cursor: pointer;
+        user-select: none;
+      }
+    }
+  }
+}
+
+.line-throught {
+  text-decoration: line-through;
+}
