@@ -16,9 +16,9 @@ function createProduct(e) {
     return;
   }
   productCounts += 1;
-  const productItem = `<li class="list-group-item">${productCounts}. ${titleFormat(
+  const productItem = `<span><li class="list-group-item">${productCounts}. ${titleFormat(
     productName
-  )}</li>`;
+  )}</li><i class="fa-solid fa-trash-can"></i></span>`;
   orderListsTag.innerHTML += productItem;
   userInputTag.value = "";
 }
@@ -32,5 +32,9 @@ orderListsTag.addEventListener("click", function (e) {
     } else {
       e.target.classList.add("line-through");
     }
+  }
+
+  if (e.target && e.target.nodeName == "I") {
+    e.target.parentElement.remove();
   }
 });
