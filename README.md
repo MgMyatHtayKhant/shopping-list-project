@@ -23,9 +23,9 @@ TODO
    >Next you click Images Tab
 
 4. Images Tab
-   >You are in Images Tab now.
-   >You can add images, delete images and search an image or images by its created date time.
-   >You can add an image by clicking Add button and filling Title and an image file then click submit button.
+   >You are in Images Tab now.  
+   >You can add images, delete images and search an image or images by its created date time.  
+   >You can add an image by clicking Add button and filling Title and an image file then click submit button.  
    >You can click images - cross icon, images title and date time will appear.  
    >if you click images again. Thoese cross icon, images title and date time will disapper.  
    >You can delete image by clicking cross icon button.  
