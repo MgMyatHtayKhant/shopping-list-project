@@ -20,7 +20,7 @@ TODO
    >You can delete note by clicking cross icon button.  
    >You can check notes created date time by hovering notes title. So you can use it for searching.  
    >You can search specific a note or notes by typing its created date time on search input field near log out.  
-   >Next you click Images Tab
+   >Next you click Images Tab.  
 
 4. Images Tab
    >You are in Images Tab now.  
@@ -30,7 +30,7 @@ TODO
    >if you click images again. Thoese cross icon, images title and created date time will disapper.  
    >You can delete image by clicking cross icon button.  
    >You can search specific an image or images by typing its created date time on search input field near log out.  
-   >Next you click Audio Tab
+   >Next you click Audio Tab.  
 
 5. Audio Tab
    >You are in Audios Tab now.  
