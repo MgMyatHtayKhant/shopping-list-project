@@ -1,8 +1,10 @@
 # Memory
-### Video Demo : (https://www.youtube.com/watch?v=8YBiQSOyIGI)
+### [Video Demo] : (https://www.youtube.com/watch?v=8YBiQSOyIGI)
 #### Description:
 
 The project is a webpage where you can save your day-to-day activities otherwise you will forget about them. You can look back your activities that what time you created. The project is simply based on game memory card.
+
+### Use
 
 1. First Register
    >You are going to fill your user name.
