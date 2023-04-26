@@ -36,8 +36,8 @@ TODO
    >You are in Audios Tab now.  
    >You can add audios, delete audios and search an audio or audios by its created date time.  
    >You can add an audio by clicking Add button and filling Title and an audio file then click submit button.  
-   >You can play an audio by clicking respective list item.  
-   >You can check audios created date time by hovering  list items. So you can use it for searching.  
+   >You can play an audio by clicking respective list items.  
+   >You can check audios created date time by hovering list items. So you can use it for searching.  
    >If you already clicked a list item, you can use next and previous buttons to play sibling audios also you can pause it.     
    >You can delete an audio by clicking trash icon button.  
    >You can search specific an audio or audios by typing its created date time on search input field near log out.  
