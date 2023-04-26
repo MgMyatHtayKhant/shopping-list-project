@@ -13,3 +13,9 @@ TODO
    You are going to fill your registered user name
    You are going to fill your registered user password
    ```
+2. Log in
+   ```
+   You are going to fill your registered user name
+   You are going to fill your registered user password
+   ```
+
