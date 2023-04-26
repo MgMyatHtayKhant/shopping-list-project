@@ -3,3 +3,6 @@
 #### Description: 
 TODO
 1. First Register
+   You are going to fill your user name
+   You are going to fill your user email 
+   You are going to fill your user password (twice)
