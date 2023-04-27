@@ -28,7 +28,7 @@ The project is a webpage where you can save your day-to-day activities otherwise
 - ### Register
   You are going to fill your username, real email, password twice.
 
-- ### 2. Log in
+- ### Log in
    You are going to fill your registered username, password.
 
 - ### Notes Tab
