@@ -177,4 +177,5 @@ def delete(what):
 
 ### MINIFIER
 >Making websites smaller and faster to load
+
 I use minifer to minify Javascript files and CSS files but you shouldn't used it for HTML files that include jinja syntax. It won't work. `https://freecodetools.org/minifier/`
