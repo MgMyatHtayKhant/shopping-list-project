@@ -1,8 +1,9 @@
 # Memory
-### [Video Demo](https://www.youtube.com/watch?v=8YBiQSOyIGI)
-#### Description:
 
-The project is a webpage where you can save your day-to-day activities otherwise you will forget about them. You can look back your activities that what time you created. The project is simply based on game memory card.
+### [Video Demo](https://www.youtube.com/watch?v=8YBiQSOyIGI)
+
+#### Description:
+The project is a webpage where you can save your day-to-day activities otherwise you will forget about them. You can look back your activities that what time you created. The project is simply based on game memory card. This web project is work on both mobile and computer.
 
 ### Technologies used:
 
@@ -13,6 +14,12 @@ The project is a webpage where you can save your day-to-day activities otherwise
 - [SQL](https://www.w3schools.com/sql/default.asp)
 - [Email-Validation](https://mailvalidation.io/support/python-email-validation/)
 
+## How to launch application
+1. First you need to create an account at `https://app.mailvalidation.io/accounts/signup/`
+2. Get API KEY `https://mailvalidation.io/support/email-validation-api-key/`
+3. Get Team name (When you sign up you have a team, its in the URL then use that)
+4. Make them environment variables if you don't there will be error
+5. Just run `flask run`
 ### 1. First Register
    You are going to fill your user name.
    You are going to fill your user email.
