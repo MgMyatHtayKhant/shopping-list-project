@@ -19,6 +19,8 @@ The project is a webpage where you can save your day-to-day activities otherwise
 2. Get API KEY `https://mailvalidation.io/support/email-validation-api-key/`
 3. Get Team name (When you sign up you have a team, its in the URL then use that)
 4. Make them environment variables if you don't there will be error
+- `export API_KEY='your api key'`
+- `export TEAM_SLUG='your team name'`
 5. Just run `flask run`
 ### 1. First Register
    You are going to fill your user name.
