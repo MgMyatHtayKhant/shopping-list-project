@@ -16,12 +16,15 @@ The project is a webpage where you can save your day-to-day activities otherwise
 
 ## How to launch application
 1. First you need to create an account at `https://app.mailvalidation.io/accounts/signup/`
-2. Get API KEY `https://mailvalidation.io/support/email-validation-api-key/`
-3. Get Team name (When you sign up you have a team, its in the URL then use that)
-4. Make them environment variables if you don't there will be error
+2. Get Team name (When you sign up you have a team, its in the URL then use that)
+3. Get API KEY `https://mailvalidation.io/support/email-validation-api-key/`
+4. Make them environment variables if you don't, there will be error.
 - `export API_KEY='your api key'`
 - `export TEAM_SLUG='your team name'`
 5. Just run `flask run`
+
+## How to use this web
+
 ### 1. First Register
    You are going to fill your user name.
    You are going to fill your user email.
