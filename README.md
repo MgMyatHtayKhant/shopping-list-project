@@ -107,7 +107,7 @@ if not email_validation(email):
 ```
 
 ### Using Python libray called pathlib
-when you log in, The web app is going to create a folder named with your session user id and inside that folder create two more folder named audio and image. I used python [pathlib](https://docs.python.org/3/library/pathlib.html) library to create folders, to add files and delete files.
+when you log in, The web app is going to create a folder named with your session user id and inside that folder create two more folder named audio and image. I used python [pathlib](https://docs.python.org/3/library/pathlib.html) library to create folders, to save files and delete files.
 
 #### Create folders
 ```
@@ -178,7 +178,7 @@ def delete(what):
 ### MINIFIER
 >Making websites smaller and faster to load
 
-I use minifer to minify Javascript files and CSS files but you shouldn't used it for HTML files that include jinja syntax. It won't work. `https://freecodetools.org/minifier/`
+I use [minifier](https://freecodetools.org/minifier/) to minify Javascript files and CSS files but you shouldn't used it for HTML files that include jinja syntax. It won't work.
 
 
 ### Thank you CS50: Introduction to Computer Science
