@@ -106,10 +106,10 @@ if not email_validation(email):
     return apology("invalid email")
 ```
 
-### Create folders when log in
+### Using Python libray called pathlib
 when you log in, The web app is going to create a folder named with your session user id and inside that folder create two more folder named audio and image. I used python [pathlib](https://docs.python.org/3/library/pathlib.html) library to create folders, to add files and delete files.
 
-
+#### Create folders
 ```
 session["user_id"] = rows[0]["id"]
 
