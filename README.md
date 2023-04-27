@@ -124,3 +124,57 @@ if not session['my-folder'].exists():
     session['my-image'].mkdir()
     session['my-audio'].mkdir()
 ```
+
+#### Add files
+```
+ef insert(route, db):
+    title = request.form.get(route + "-title-name")
+    if not title:
+        return apology("must prove title")
+
+    if route not in request.files:
+        return apology("must provide " + route + " file")
+    file = request.files[route]
+    if file.filename == "":
+        return apology("must provide image file")
+
+    date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    id = db.execute("INSERT INTO ?(user_id, title, date) VALUES(?, ?, ?)",
+                    route + "s", session['user_id'], title, date)
+
+    path = str(session[f"my-{route}"] / str(id))
+    rows = [{"id": id, "user_id": session["user_id"],
+             "title": title, "date": date}]
+    file.save(path)
+
+    return jsonify(rows)
+```
+
+#### Delete files
+```
+@app.route("/delete/<what>", methods=["POST"])
+@login_required
+def delete(what):
+    if what == "note":
+        data = request.json
+        db.execute("DELETE FROM notes WHERE user_id = ? AND id = ?",
+                   session["user_id"], data.get("id"))
+    elif what == "image":
+        data = request.json
+        db.execute("DELETE FROM images WHERE user_id = ? AND id = ?",
+                   session["user_id"], data.get("id"))
+        path = session['my-image'] / data.get("id")
+        path.unlink()
+    elif what == "audio":
+        data = request.json
+        db.execute("DELETE FROM audios WHERE user_id = ? AND id = ?",
+                   session["user_id"], data.get("id"))
+        path = session['my-audio'] / data.get("id")
+        path.unlink()
+    return jsonify("yes")
+```
+
+### MINIFIER
+>Making websites smaller and faster to load
+I use minifer to minify Javascript files and CSS files but you shouldn't used it for HTML files that include jinja syntax. It won't work. `https://freecodetools.org/minifier/`
