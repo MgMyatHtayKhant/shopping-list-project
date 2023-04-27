@@ -15,13 +15,14 @@ The project is a webpage where you can save your day-to-day activities otherwise
 - [Email-Validation](https://mailvalidation.io/support/python-email-validation/)
 
 ## How to launch application
-1. First you need to create an account at `https://app.mailvalidation.io/accounts/signup/`
-2. Get Team name (When you sign up you have a team, its in the URL then use that)
-3. Get API KEY `https://mailvalidation.io/support/email-validation-api-key/`
-4. Make them environment variables if you don't, there will be error.
+1. Install requirements.txt by 'pip install -r requirements.txt'
+2. First you need to create an account at `https://app.mailvalidation.io/accounts/signup/`
+3. Get Team name (When you sign up you have a team, its in the URL then use that)
+4. Get API KEY `https://mailvalidation.io/support/email-validation-api-key/`
+5. Make them environment variables if you don't, there will be error.
 - `export API_KEY='your api key'`
 - `export TEAM_SLUG='your team name'`
-5. Just run `flask run`
+6. Just run `flask run`
 
 ## How to use this web
 
@@ -63,6 +64,10 @@ The project is a webpage where you can save your day-to-day activities otherwise
 
 ## Explaing the import part of the project
 
+I think you know most part of the codes by looking at it. A few code need to explain so I am here to explain it.
+
+### Email validation
+
 I check a email is a valid or not in two ways. First I check with [email_validator](https://pypi.org/project/email-validator/) and then I check with [mailvalidation](https://mailvalidation.io/) API by creating a function inside the 'helpers.py' file then use this function in /register route that is in 'app.py' file.
 
 ```
@@ -96,27 +101,26 @@ def email_validation(email):
 ```
 
 ```
-from helpers import apology, login_required, email_validation, insert
+# Ensure email was validated
+if not email_validation(email):
+    return apology("invalid email")
+```
+
+### Create folders when log in
+when you log in, The web app is going to create a folder named with your session user id and inside that folder create two more folder named audio and image. I used python [pathlib](https://docs.python.org/3/library/pathlib.html) library to create folders, to add files and delete files.
 
 
-@app.route("/register", methods=["GET", "POST"])
-def register():
-    """Register user"""
+```
+session["user_id"] = rows[0]["id"]
 
-    if request.method == "POST":
+session['static'] = Path('static')
 
-        # Ensure username was submitted
-        username = request.form.get("username")
-        if not username:
-            return apology("must provide username")
+session['my-folder'] = session['static'] / str(session['user_id'])
+session['my-image'] = session['my-folder'] / 'image'
+session['my-audio'] = session['my-folder'] / 'audio'
 
-        # Ensure email was submitted
-        email = request.form.get("email")
-        if not email:
-            return apology("must provide email")
-
-        # Ensure email was validated
-        if not email_validation(email):
-            return apology("invalid email")
-.....
+if not session['my-folder'].exists():
+    session['my-folder'].mkdir()
+    session['my-image'].mkdir()
+    session['my-audio'].mkdir()
 ```
