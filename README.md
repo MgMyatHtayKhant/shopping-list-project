@@ -60,3 +60,63 @@ The project is a webpage where you can save your day-to-day activities otherwise
    If you already clicked a list item, you can use next and previous buttons to play sibling audios also you can pause it.
    You can delete an audio by clicking trash icon button.
    You can search specific an audio or audios by typing its created date time on search input field near log out.
+
+## Explaing the import part of the project
+
+I check a email is a valid or not in two ways. First I check with [email_validator](https://pypi.org/project/email-validator/) and then I check with [mailvalidation](https://mailvalidation.io/) API by creating a function inside the 'helpers.py' file then use this function in /register route that is in 'app.py' file.
+
+```
+from email_validator import validate_email, EmailNotValidError
+
+def email_validation(email):
+    """Accept email and check it is valid or not"""
+    try:
+        validation = validate_email(email, check_deliverability=False)
+        email = validation.email
+    except EmailNotValidError as e:
+        print(str(e))
+        return False
+
+    # API Validation from https://mailvalidation.io/
+    api_key = os.environ.get("API_KEY")
+    team_slug = os.environ.get("TEAM_SLUG")
+
+    response = requests.post(
+        "https://app.mailvalidation.io/a/" + team_slug + "/validate/api/validate/",
+        json={'email': email},
+        headers={
+            'content-type': 'application/json',
+            'accept': 'application/json',
+            'Authorization': 'Api-Key ' + api_key,
+        })
+
+    valid = response.json()["is_valid"]
+
+    return valid
+```
+
+```
+from helpers import apology, login_required, email_validation, insert
+
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    """Register user"""
+
+    if request.method == "POST":
+
+        # Ensure username was submitted
+        username = request.form.get("username")
+        if not username:
+            return apology("must provide username")
+
+        # Ensure email was submitted
+        email = request.form.get("email")
+        if not email:
+            return apology("must provide email")
+
+        # Ensure email was validated
+        if not email_validation(email):
+            return apology("invalid email")
+.....
+```
