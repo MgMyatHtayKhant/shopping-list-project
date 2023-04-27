@@ -25,18 +25,13 @@ The project is a webpage where you can save your day-to-day activities otherwise
 
 ## How to use this web
 
-### 1. First Register
-   You are going to fill your user name.
-   You are going to fill your user email.
-   You are going to fill your user password (twice).
-   Then click submit button.
+- ### 1. First Register
+  You are going to fill your username, real email, password twice.
 
-### 2. Log in
-   You are going to fill your registered user name.
-   You are going to fill your registered user password.
-   Then click submit button.
+- ### 2. Log in
+   You are going to fill your registered username, password.
 
-### 3. Notes Tab
+- ### 3. Notes Tab
    There are 3 tabs in the page.
    You are in Notes tab now.
    You can add notes, delete notes and search a note or notes by its created date time.
@@ -46,7 +41,7 @@ The project is a webpage where you can save your day-to-day activities otherwise
    You can search specific a note or notes by typing its created date time on search input field near log out.
    Next you click Images Tab.
 
-### 4. Images Tab
+- ### 4. Images Tab
    You are in Images Tab now.
    You can add images, delete images and search an image or images by its created date time.
    You can add an image by clicking Add button and filling Title and an image file then click submit button.
@@ -56,7 +51,7 @@ The project is a webpage where you can save your day-to-day activities otherwise
    You can search specific an image or images by typing its created date time on search input field near log out.
    Next you click Audio Tab.
 
-### 5. Audio Tab
+- ### 5. Audio Tab
    You are in Audios Tab now.
    You can add audios, delete audios and search an audio or audios by its created date time.
    You can add an audio by clicking Add button and filling Title and an audio file then click submit button.
