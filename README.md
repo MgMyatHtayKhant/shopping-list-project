@@ -186,5 +186,6 @@ I really appreciate
 Harvard professor [David J Malan](https://cs.harvard.edu/malan/)
 [Brian Yu](https://brianyu.me/)
 [Doug Lloyd](https://douglloyd.com/)
-Former members and current members of the CS50  
+Former members and current members of the CS50
 for making this course free and accessible for everyone. Thank you very much and I hope all of you guys well.
+This is [CS50](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x).
